@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fitness Analyzer</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<section id="form-screen" class="screen active">
+    <div class="hero">
+        <h1>Train Smart. Track Better.</h1>
+        <p>Your personalized fitness intelligence</p>
+    </div>
+
+    <div class="card">
+        <form id="fitnessForm">
+            <input name="name" placeholder="Name" required>
+            <input type="number" name="age" placeholder="Age" required>
+            <input type="number" name="height" placeholder="Height (cm)" required>
+            <input type="number" name="weight" placeholder="Weight (kg)" required>
+
+            <select name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <select name="activity">
+                <option value="sedentary">Sedentary</option>
+                <option value="moderate">Moderate</option>
+                <option value="active">Active</option>
+            </select>
+
+            <select name="goal">
+                <option value="fat_loss">Fat Loss</option>
+                <option value="muscle_gain">Muscle Gain</option>
+                <option value="maintenance">Maintenance</option>
+            </select>
+
+            <input type="number" name="workouts" placeholder="Workouts per week" required>
+
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+</section>
+
+<section id="result-screen" class="screen">
+    <div class="result-card">
+        <div id="score-ring"></div>
+
+        <div id="metrics"></div>
+
+        <div id="bmi-bar">
+            <div id="bmi-indicator"></div>
+        </div>
+
+        <div id="population"></div>
+
+        <div id="suggestions"></div>
+
+        <div class="actions">
+            <button id="backBtn">Back</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+</section>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>
